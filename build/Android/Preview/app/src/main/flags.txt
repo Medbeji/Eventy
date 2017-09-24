@@ -1,0 +1,7 @@
+
+9
+armeabi-v7a
+-O3 -g -DNDEBUG
+
+ -I/Users/medbeji/Library/Application\ Support/Fusetools/Packages/UnoCore/0.47.13/prebuilt/Android/include -I/sources/android/support/include -I/Users/medbeji/Library/Application\ Support/Fusetools/Packages/Fuse.Scripting.V8/0.47.7 -I/Users/medbeji/Library/Application\ Support/Fusetools/Packages/Fuse.Text/0.47.7/harfbuzz/include
+/sources/cxx-stl/stlport/stlport

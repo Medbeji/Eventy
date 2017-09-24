@@ -1,0 +1,31 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+  	"Fuse",
+  	"FuseJS",
+     "Fuse.BasicTheme",
+  ],
+  "Facebook": {
+    "AppID": "1874767182801316",
+    "CFBundleURLSchemes": "URL_SCHEME_HERE"
+  },
+  "Includes": [
+    "*",
+    "Assets/Authors/*.jpeg:Bundle",
+    "Assets/Images/*.jpg:Bundle",
+    "Assets/Icons/*.png:Bundle",
+    "Assets/Buttons/*.png:Bundle",
+    "fuse-firebase.js:Bundle",
+    "firebase-config.js:Bundle",
+    "node_modules/firebase/app.js:Bundle",
+    "node_modules/firebase/auth.js:Bundle",
+    "node_modules/firebase/storage.js:Bundle",
+    "node_modules/firebase/database.js:Bundle",
+    "node_modules/firebase/messaging.js:Bundle",
+    "node_modules/firebase/authnode.js:Bundle",
+    "Sidebar.ux:UXFile",
+    "NewsItem.ux:UXFile",
+    "places.js:Bundle",
+
+  ]
+}

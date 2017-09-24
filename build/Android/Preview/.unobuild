@@ -1,0 +1,4 @@
+$: 1378226262
+BuildCommand: build.sh
+RunCommand: run.sh
+Product: EventApp.apk

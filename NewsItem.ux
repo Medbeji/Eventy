@@ -1,0 +1,74 @@
+<StackPanel ux:Class="NewsItem" Margin="0,14,0,10">
+	<Panel ux:Class="VerticalBar" Margin="8,0,8,2" Alignment="VerticalCenter">
+		<Rectangle Height="12" Width="2" Color="#dcdee3" />
+	</Panel>
+	<Panel ux:Class="HorizontalBar" Margin="46,10,0,10" Alignment="VerticalCenter">
+		<Rectangle Height="1" Color="#dcdee3" />
+	</Panel>
+
+	<!-- Text -->
+	<Text ux:Class="SubText" Alignment="VerticalCenter" FontSize="12" Color="#7a96b2" />
+	<Text ux:Class="Header" Margin="14,10,14,5" TextWrapping="Wrap" FontSize="22">
+		<Font File="Assets/fonts/AlegreyaSans-Bold.otf" />
+	</Text>
+	<Text ux:Class="Article" Margin="14,0,14,0" TextWrapping="Wrap" FontSize="13">
+		<Font File="Assets/fonts/Lato-Regular.ttf" />
+	</Text>
+	<Text ux:Class="Name" FontSize="15">
+		<Font File="Assets/fonts/Roboto-Bold.ttf" />
+	</Text>
+	<!-- The header -->
+	<DockPanel Margin="10,0,0,15">
+		<Circle Dock="Left" Width="45" Height="45">
+			<ImageFill Url="{ club.image }" WrapMode="ClampToEdge" />
+		</Circle>
+
+		<DockPanel Margin="10,4,10,0">
+			<StackPanel Dock="Top" Orientation="Horizontal">
+				<Name Value="{ club.name }" Clicked="{showDetails}" />
+			</StackPanel>
+			<StackPanel Dock="Bottom" Orientation="Horizontal">
+				<SubText Value="{ date}" />
+				<VerticalBar />
+				<SubText Value="{ heure }" />
+				<VerticalBar />
+				<Image File="Assets/Icons/Location.png" Color="#333c48" Width="14" Height="14" Margin="0,0,2,2" Alignment="VerticalCenter" />
+				<SubText Value="{ location }" TextAlignment="Center" Margin="3, 0, 0, 0" />
+			</StackPanel>
+		</DockPanel>
+
+		<Circle Dock="Right" Width="30" Height="30" Margin="5,5,15,5" Clicked="{joinClub}">
+			<ImageFill File="{joinImage}" WrapMode="ClampToEdge" />
+			<Tapped>
+   			 	<Scale Factor="1.2" Duration="0.3" Easing="BackOut" />
+   			 </Tapped>
+		</Circle>
+	</DockPanel>
+	
+	<!-- Main article body -->
+	<Image Url="{ linkImage }" StretchMode="UniformToFill" Height="270" />
+	<Header Value="{ name }" />
+	<Article Value="{ description }" />
+
+	<Image ux:Class="ActionIcon" Height="22" Width="22" Alignment="VerticalCenter" Color="#c4d2e1" />
+	<Text ux:Class="Stat" Alignment="VerticalCenter" Margin="5,0,17,0" FontSize="15" Color="#7a96b2">
+		<Font File="Assets/fonts/Lato-Bold.ttf" />
+	</Text>
+
+	<StackPanel Orientation="Horizontal" Margin="14,10,14,8">
+		<!-- <ActionIcon File="Assets/Icons/Like.png" /> -->
+		<Button Height="22" Width="22" Alignment="VerticalCenter">
+   			 <Image File="Assets/Icons/checked.png" Color="#c4d2e1" />
+		</Button>
+		<Stat Value="{ likes }" />
+		<Button Height="22" Width="150" Alignment="CenterRight" Margin="120, 0, 0, 0" Clicked="{ participateToEvent }">	
+   			 <Image File="{ buttonImage }" Alignment="Right" />
+   			 <Tapped>
+   			 	<Scale Factor="1.3" Duration="0.3" Easing="BackOut" />
+   			 </Tapped>
+		</Button>
+
+	</StackPanel>
+
+	<HorizontalBar />
+</StackPanel>

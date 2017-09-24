@@ -1,0 +1,48 @@
+// This file was generated based on '/Users/medbeji/Library/Application Support/Fusetools/Packages/Fuse.Marshal/0.47.7/$.uno'.
+// WARNING: Changes might be lost if you edit this file directly.
+
+#pragma once
+#include <Uno.Object.h>
+namespace g{namespace Fuse{struct Computer;}}
+
+namespace g{
+namespace Fuse{
+
+// internal abstract class Computer :16
+// {
+struct Computer_type : uType
+{
+    void(*fp_Add)(::g::Fuse::Computer*, uObject*, uObject*, uObject**);
+    void(*fp_Divide)(::g::Fuse::Computer*, uObject*, uObject*, uObject**);
+    void(*fp_EqualTo)(::g::Fuse::Computer*, uObject*, uObject*, bool*);
+    void(*fp_GreaterOrEqual)(::g::Fuse::Computer*, uObject*, uObject*, bool*);
+    void(*fp_GreaterThan)(::g::Fuse::Computer*, uObject*, uObject*, bool*);
+    void(*fp_LessOrEqual)(::g::Fuse::Computer*, uObject*, uObject*, bool*);
+    void(*fp_LessThan)(::g::Fuse::Computer*, uObject*, uObject*, bool*);
+    void(*fp_Max)(::g::Fuse::Computer*, uObject*, uObject*, uObject**);
+    void(*fp_Min)(::g::Fuse::Computer*, uObject*, uObject*, uObject**);
+    void(*fp_Multiply)(::g::Fuse::Computer*, uObject*, uObject*, uObject**);
+    void(*fp_Subtract)(::g::Fuse::Computer*, uObject*, uObject*, uObject**);
+};
+
+Computer_type* Computer_typeof();
+void Computer__ctor__fn(Computer* __this);
+
+struct Computer : uObject
+{
+    void ctor_();
+    uObject* Add(uObject* a, uObject* b) { uObject* __retval; return (((Computer_type*)__type)->fp_Add)(this, a, b, &__retval), __retval; }
+    uObject* Divide(uObject* a, uObject* b) { uObject* __retval; return (((Computer_type*)__type)->fp_Divide)(this, a, b, &__retval), __retval; }
+    bool EqualTo(uObject* a, uObject* b) { bool __retval; return (((Computer_type*)__type)->fp_EqualTo)(this, a, b, &__retval), __retval; }
+    bool GreaterOrEqual(uObject* a, uObject* b) { bool __retval; return (((Computer_type*)__type)->fp_GreaterOrEqual)(this, a, b, &__retval), __retval; }
+    bool GreaterThan(uObject* a, uObject* b) { bool __retval; return (((Computer_type*)__type)->fp_GreaterThan)(this, a, b, &__retval), __retval; }
+    bool LessOrEqual(uObject* a, uObject* b) { bool __retval; return (((Computer_type*)__type)->fp_LessOrEqual)(this, a, b, &__retval), __retval; }
+    bool LessThan(uObject* a, uObject* b) { bool __retval; return (((Computer_type*)__type)->fp_LessThan)(this, a, b, &__retval), __retval; }
+    uObject* Max(uObject* a, uObject* b) { uObject* __retval; return (((Computer_type*)__type)->fp_Max)(this, a, b, &__retval), __retval; }
+    uObject* Min(uObject* a, uObject* b) { uObject* __retval; return (((Computer_type*)__type)->fp_Min)(this, a, b, &__retval), __retval; }
+    uObject* Multiply(uObject* a, uObject* b) { uObject* __retval; return (((Computer_type*)__type)->fp_Multiply)(this, a, b, &__retval), __retval; }
+    uObject* Subtract(uObject* a, uObject* b) { uObject* __retval; return (((Computer_type*)__type)->fp_Subtract)(this, a, b, &__retval), __retval; }
+};
+// }
+
+}} // ::g::Fuse

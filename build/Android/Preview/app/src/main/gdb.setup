@@ -1,0 +1,4 @@
+directory jni:include:/Users/medbeji/Library/Application Support/Fusetools/Packages/UnoCore/0.47.13/prebuilt/Android/include:/sources/android/support/include:/Users/medbeji/Library/Application Support/Fusetools/Packages/Fuse.Scripting.V8/0.47.7:/Users/medbeji/Library/Application Support/Fusetools/Packages/Fuse.Text/0.47.7/harfbuzz/include:/platforms/android-19/arch-arm/usr/include:/sources/cxx-stl/stlport/stlport:/sources/cxx-stl/gabi++/include
+set solib-search-path .uno:/Users/medbeji/Library/Application Support/Fusetools/Packages/UnoCore/0.47.13/prebuilt/Android/lib/armeabi-v7a:/sources/cxx-stl/stlport/libs/armeabi-v7a:/Users/medbeji/Library/Application Support/Fusetools/Packages/Fuse.Scripting.V8/0.47.7/lib/Android:/Users/medbeji/Library/Application Support/Fusetools/Packages/Fuse.Text/0.47.7/harfbuzz/lib/Android
+sharedlibrary
+set auto-solib-add on

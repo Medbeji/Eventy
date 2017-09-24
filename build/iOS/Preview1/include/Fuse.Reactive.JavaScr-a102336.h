@@ -1,0 +1,32 @@
+// This file was generated based on '/Users/medbeji/Library/Application Support/Fusetools/Packages/Fuse.Reactive.JavaScript/1.0.2/$.uno'.
+// WARNING: Changes might be lost if you edit this file directly.
+
+#pragma once
+#include <Uno.Object.h>
+namespace g{namespace Fuse{namespace Reactive{struct JavaScript__DiagnosticSubject;}}}
+namespace g{namespace Fuse{namespace Scripting{struct ScriptException;}}}
+
+namespace g{
+namespace Fuse{
+namespace Reactive{
+
+// internal class JavaScript.DiagnosticSubject :408
+// {
+uType* JavaScript__DiagnosticSubject_typeof();
+void JavaScript__DiagnosticSubject__ctor__fn(JavaScript__DiagnosticSubject* __this);
+void JavaScript__DiagnosticSubject__ClearDiagnostic_fn(JavaScript__DiagnosticSubject* __this);
+void JavaScript__DiagnosticSubject__New1_fn(JavaScript__DiagnosticSubject** __retval);
+void JavaScript__DiagnosticSubject__SetDiagnostic_fn(JavaScript__DiagnosticSubject* __this, ::g::Fuse::Scripting::ScriptException* se);
+
+struct JavaScript__DiagnosticSubject : uObject
+{
+    uStrong<uObject*> _diagnostic;
+
+    void ctor_();
+    void ClearDiagnostic();
+    void SetDiagnostic(::g::Fuse::Scripting::ScriptException* se);
+    static JavaScript__DiagnosticSubject* New1();
+};
+// }
+
+}}} // ::g::Fuse::Reactive

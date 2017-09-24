@@ -1,0 +1,11 @@
+<App Background="#fff">
+    <Router ux:Name="router" />
+    <Navigator DefaultPath="login">
+        <LoginPage ux:Template="login" router="router" />
+        <HomePage ux:Template="home" router="router" />
+        <SignUpPage ux:Template="signUp" router="router" />
+        <ClubPage ux:Template="club" router="router" />
+        <DetailView ux:Template="detail" router="router" />
+        <Search ux:Template="search" router="router"/>
+    </Navigator> 
+</App>

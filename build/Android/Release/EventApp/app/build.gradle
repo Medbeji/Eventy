@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile fileTree(dir: 'src/main/libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+//#if #(Gradle.Dependency.Compile:IsRequired)
+//    #(Gradle.Dependency.Compile:Join('\n', 'compile \'', '\''))
+//#endif
+//#if #(Gradle.Dependency:IsRequired)
+//    #(Gradle.Dependency:Join('\n'))
+//#endif
+}
+
+
+task copySharedLibraries {
+    copy {
+        from 'C:/Users/nour/AppData/Local/Android/sdk/ndk-bundle/sources/cxx-stl/stlport/libs/armeabi-v7a/libstlport_shared.so'
+        into file('src/main/jniLibs/armeabi-v7a')
+    }
+    copy {
+        from 'C:/Users/nour/AppData/Local/Fusetools/Packages/Fuse.Scripting.V8/0.46.1/lib/Android/libV8Simple.so'
+        into file('src/main/jniLibs/armeabi-v7a')
+    }
+}
+
+build.dependsOn copySharedLibraries
+
+//#if #(Gradle.Repository:IsRequired)
+//repositories {
+//    #(Gradle.Repository:Join('\n'))
+//}
+//#endif
+
+
+repositories {
+//#if #(JNI.SystemLibrary:IsSet || JNI.SharedLibrary:IsSet)
+//    libs(PrebuiltLibraries) {
+//        prebuilt {
+//            binaries.withType(SharedLibraryBinary) {
+//                #(JNI.SystemLibrary:Join('\n                    ', 'sharedLibraryFile = file(\'', '\')'))
+//                #(JNI.SharedLibrary:Join('\n                    ', 'sharedLibraryFile = file(\'', '\')'))
+//            }
+//        }
+//    }
+//#endif
+//#if #(Gradle.Model.Repository:IsRequired)
+//    #(Gradle.Model.Repository:Join('\n'))
+//#endif
+}
+
+android.lintOptions {
+    checkReleaseBuilds = false
+}
+
+android {
+    compileSdkVersion = 23
+    buildToolsVersion = "25.0.2"
+
+    defaultConfig {
+        applicationId = "com.apps.eventapp"
+        minSdkVersion = 16
+        targetSdkVersion = 23
+        versionCode = 0
+        versionName = "0.0.0"
+        ndk {
+            abiFilters = []
+            abiFilters.add("armeabi-v7a")
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            // Provides a relative path to your CMake build script.
+            path "../../CMakeLists.txt"
+        }
+    }
+
+//#if #(Project.Android.Key.Store:IsSet)
+//    signingConfigs {
+//        release {
+//            keyAlias "#(Project.Android.Key.Alias)"
+//            keyPassword "#(Project.Android.Key.AliasPassword)"
+//            storeFile file("#(Project.Android.Key.Store:Path)")
+//            storePassword "#(Project.Android.Key.StorePassword)"
+//        }
+//    }
+//#endif
+
+    buildTypes {
+        release {
+//#if #(DEBUG:Defined)
+//            debuggable = true
+//#endif
+            minifyEnabled = false
+            proguardFiles 'proguard-rules.pro'
+//#if #(Project.Android.Key.Store:IsSet)
+//            signingConfig = signingConfigs.release
+//#endif
+        }
+    }
+}
+

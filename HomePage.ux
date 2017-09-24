@@ -1,0 +1,82 @@
+<Page ux:Class="HomePage">
+    <Router ux:Dependency="router" />
+    <JavaScript File="MainView.js" />
+ 	 <EdgeNavigator ux:Name="EdgeNavigator">
+
+		<!-- Add a panel to the left edge -->
+		<Sidebar Width="180" ux:Name="menu" EdgeNavigation.Edge="Left">
+			<ActivatingAnimation>
+				<Change mainAppTranslation.X="180" />
+				<!-- Change to cross out -->
+				<Change topMenuTranslation.Y="0" />
+				<Change bottomMenuTranslation.Y="0" />
+				<Change middleRectangle.Opacity="0" Easing="CircularOut" />
+				<Change topMenuRotation.Degrees="45" Easing="ExponentialIn" />
+				<Change bottomMenuRotation.Degrees="-45" Easing="ExponentialIn" />
+				<Change topRectangle.Width="28" />
+				<Change bottomRectangle.Width="28" />
+			</ActivatingAnimation>
+			<WhileActive>
+				<Callback Handler="{setSidebarOpen}" />
+			</WhileActive>
+			<WhileInactive>
+				<Callback Handler="{setSidebarClosed}" />
+			</WhileInactive>
+		</Sidebar>
+
+		<DockPanel ux:Name="content" Background="#fff">
+			<!-- Use this to move the main app area with the side menu -->
+			<Translation ux:Name="mainAppTranslation" />
+
+			<StatusBarBackground Dock="Top" />
+			<BottomFrameBackground Dock="Bottom" />
+
+			<StackPanel Dock="Top">
+
+				<!-- This is the top ledge -->
+				<Grid Columns="auto,1*,auto" Background="White">
+					<Panel Margin="7,5,5,5" Height="32" Width="32" HitTestMode="LocalBounds">
+						<WhileTrue Value="{sidebarOpen}">
+							<Clicked>
+								<NavigateTo Target="content" />
+							</Clicked>
+						</WhileTrue>
+						<WhileFalse Value="{sidebarOpen}">
+							<Clicked>
+								<NavigateTo Target="menu" />
+							</Clicked>
+						</WhileFalse>
+						<Rectangle ux:Name="topRectangle" Height="2" Width="26" Color="#000">
+							<Translation Y="-9" ux:Name="topMenuTranslation" />
+							<Rotation ux:Name="topMenuRotation" />
+						</Rectangle>
+						<Rectangle ux:Name="middleRectangle" Height="2" Width="26" Color="#000" />
+						<Rectangle ux:Name="bottomRectangle" Height="2" Width="26" Color="#000">
+							<Translation Y="9" ux:Name="bottomMenuTranslation" />
+							<Rotation ux:Name="bottomMenuRotation" />
+						</Rectangle>
+					</Panel>
+
+					<Text FontSize="22" Alignment="VerticalCenter" TextAlignment="Center" Value="Events" Padding="2">
+						<Font File="assets/fonts/AlegreyaSans-Bold.otf" />
+					</Text>
+
+					<Panel Margin="5,5,7,5" Height="32" Width="32" >
+						<Image File="Assets/Icons/icon_search.png" Alignment="Right" Margin="1,1,1,1" Clicked="{ goToSearch }" />
+					</Panel>
+				</Grid>
+				<Rectangle Height="1" Margin="0,5,0,0" Color="#333c48" />
+			</StackPanel>
+
+			<!-- This is the main scroll area -->
+			<ScrollView Margin="0, 0, 0, 0">
+				<StackPanel Alignment="Top">
+					<Panel Height="7" />
+					<Each Items="{ data }">
+						<NewsItem />
+					</Each>
+				</StackPanel>
+			</ScrollView>
+		</DockPanel>
+	</EdgeNavigator>
+</Page>

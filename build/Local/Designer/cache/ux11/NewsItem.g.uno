@@ -1,0 +1,196 @@
+[Uno.Compiler.UxGenerated]
+public partial class NewsItem: Fuse.Controls.StackPanel
+{
+    global::Uno.UX.Property<string> temp_Url_inst;
+    global::Uno.UX.Property<string> temp1_Value_inst;
+    global::Uno.UX.Property<string> temp2_Value_inst;
+    global::Uno.UX.Property<string> temp3_Value_inst;
+    global::Uno.UX.Property<string> temp4_Value_inst;
+    global::Uno.UX.Property<Uno.UX.FileSource> temp5_File_inst;
+    global::Uno.UX.Property<string> temp6_Url_inst;
+    global::Uno.UX.Property<string> temp7_Value_inst;
+    global::Uno.UX.Property<string> temp8_Value_inst;
+    global::Uno.UX.Property<string> temp9_Value_inst;
+    global::Uno.UX.Property<Uno.UX.FileSource> temp10_File_inst;
+    internal global::Fuse.Reactive.EventBinding temp_eb4;
+    internal global::Fuse.Reactive.EventBinding temp_eb5;
+    internal global::Fuse.Reactive.EventBinding temp_eb6;
+    global::Uno.UX.NameTable __g_nametable;
+    static string[] __g_static_nametable = new string[] {
+        "temp_eb4",
+        "temp_eb5",
+        "temp_eb6"
+    };
+    static NewsItem()
+    {
+    }
+    [global::Uno.UX.UXConstructor]
+    public NewsItem()
+    {
+        InitializeUX();
+    }
+    void InitializeUX()
+    {
+        var temp11 = new global::Fuse.Reactive.Data("club");
+        var temp = new global::Fuse.Drawing.ImageFill();
+        temp_Url_inst = new EventApp_FuseDrawingImageFill_Url_Property(temp, __selector0);
+        var temp12 = new global::Fuse.Reactive.Member(temp11, "image");
+        __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
+        var temp13 = new global::Fuse.Reactive.Data("club");
+        var temp1 = new global::Name();
+        temp1_Value_inst = new EventApp_FuseControlsTextControl_Value_Property(temp1, __selector1);
+        var temp14 = new global::Fuse.Reactive.Member(temp13, "name");
+        var temp15 = new global::Fuse.Reactive.Data("showDetails");
+        var temp2 = new global::SubText();
+        temp2_Value_inst = new EventApp_FuseControlsTextControl_Value_Property(temp2, __selector1);
+        var temp16 = new global::Fuse.Reactive.Data("date");
+        var temp3 = new global::SubText();
+        temp3_Value_inst = new EventApp_FuseControlsTextControl_Value_Property(temp3, __selector1);
+        var temp17 = new global::Fuse.Reactive.Data("heure");
+        var temp4 = new global::SubText();
+        temp4_Value_inst = new EventApp_FuseControlsTextControl_Value_Property(temp4, __selector1);
+        var temp18 = new global::Fuse.Reactive.Data("location");
+        var temp19 = new global::Fuse.Reactive.Data("joinClub");
+        var temp5 = new global::Fuse.Drawing.ImageFill();
+        temp5_File_inst = new EventApp_FuseDrawingImageFill_File_Property(temp5, __selector2);
+        var temp20 = new global::Fuse.Reactive.Data("joinImage");
+        var temp6 = new global::Fuse.Controls.Image();
+        temp6_Url_inst = new EventApp_FuseControlsImage_Url_Property(temp6, __selector0);
+        var temp21 = new global::Fuse.Reactive.Data("linkImage");
+        var temp7 = new global::Header();
+        temp7_Value_inst = new EventApp_FuseControlsTextControl_Value_Property(temp7, __selector1);
+        var temp22 = new global::Fuse.Reactive.Data("name");
+        var temp8 = new global::Article();
+        temp8_Value_inst = new EventApp_FuseControlsTextControl_Value_Property(temp8, __selector1);
+        var temp23 = new global::Fuse.Reactive.Data("description");
+        var temp9 = new global::Stat();
+        temp9_Value_inst = new EventApp_FuseControlsTextControl_Value_Property(temp9, __selector1);
+        var temp24 = new global::Fuse.Reactive.Data("likes");
+        var temp10 = new global::Fuse.Controls.Image();
+        temp10_File_inst = new EventApp_FuseControlsImage_File_Property(temp10, __selector2);
+        var temp25 = new global::Fuse.Reactive.Data("buttonImage");
+        var temp26 = new global::Fuse.Reactive.Data("participateToEvent");
+        var temp27 = new global::Fuse.Controls.DockPanel();
+        var temp28 = new global::Fuse.Controls.Circle();
+        var temp29 = new global::Fuse.Reactive.DataBinding(temp_Url_inst, temp12, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp30 = new global::Fuse.Controls.DockPanel();
+        var temp31 = new global::Fuse.Controls.StackPanel();
+        var temp32 = new global::Fuse.Reactive.DataBinding(temp1_Value_inst, temp14, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        temp_eb4 = new global::Fuse.Reactive.EventBinding(temp15, __g_nametable);
+        var temp33 = new global::Fuse.Controls.StackPanel();
+        var temp34 = new global::Fuse.Reactive.DataBinding(temp2_Value_inst, temp16, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp35 = new global::VerticalBar();
+        var temp36 = new global::Fuse.Reactive.DataBinding(temp3_Value_inst, temp17, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp37 = new global::VerticalBar();
+        var temp38 = new global::Fuse.Controls.Image();
+        var temp39 = new global::Fuse.Reactive.DataBinding(temp4_Value_inst, temp18, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp40 = new global::Fuse.Controls.Circle();
+        temp_eb5 = new global::Fuse.Reactive.EventBinding(temp19, __g_nametable);
+        var temp41 = new global::Fuse.Reactive.DataBinding(temp5_File_inst, temp20, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp42 = new global::Fuse.Reactive.DataBinding(temp6_Url_inst, temp21, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp43 = new global::Fuse.Reactive.DataBinding(temp7_Value_inst, temp22, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp44 = new global::Fuse.Reactive.DataBinding(temp8_Value_inst, temp23, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp45 = new global::Fuse.Controls.StackPanel();
+        var temp46 = new global::Fuse.Controls.Button();
+        var temp47 = new global::Fuse.Controls.Image();
+        var temp48 = new global::Fuse.Reactive.DataBinding(temp9_Value_inst, temp24, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp49 = new global::Fuse.Controls.Button();
+        var temp50 = new global::Fuse.Reactive.DataBinding(temp10_File_inst, temp25, __g_nametable, Fuse.Reactive.BindingMode.Default);
+        var temp51 = new global::Fuse.Gestures.Tapped();
+        var temp52 = new global::Fuse.Animations.Scale();
+        temp_eb6 = new global::Fuse.Reactive.EventBinding(temp26, __g_nametable);
+        var temp53 = new global::HorizontalBar();
+        this.Margin = float4(0f, 14f, 0f, 10f);
+        temp27.Margin = float4(10f, 0f, 0f, 15f);
+        temp27.Children.Add(temp28);
+        temp27.Children.Add(temp30);
+        temp27.Children.Add(temp40);
+        temp28.Width = new Uno.UX.Size(45f, Uno.UX.Unit.Unspecified);
+        temp28.Height = new Uno.UX.Size(45f, Uno.UX.Unit.Unspecified);
+        global::Fuse.Controls.DockPanel.SetDock(temp28, Fuse.Layouts.Dock.Left);
+        temp28.Fills.Add(temp);
+        temp28.Bindings.Add(temp29);
+        temp.WrapMode = Fuse.Drawing.WrapMode.ClampToEdge;
+        temp30.Margin = float4(10f, 4f, 10f, 0f);
+        temp30.Children.Add(temp31);
+        temp30.Children.Add(temp33);
+        temp31.Orientation = Fuse.Layouts.Orientation.Horizontal;
+        global::Fuse.Controls.DockPanel.SetDock(temp31, Fuse.Layouts.Dock.Top);
+        temp31.Children.Add(temp1);
+        global::Fuse.Gestures.Clicked.AddHandler(temp1, temp_eb4.OnEvent);
+        temp1.Bindings.Add(temp32);
+        temp1.Bindings.Add(temp_eb4);
+        temp33.Orientation = Fuse.Layouts.Orientation.Horizontal;
+        global::Fuse.Controls.DockPanel.SetDock(temp33, Fuse.Layouts.Dock.Bottom);
+        temp33.Children.Add(temp2);
+        temp33.Children.Add(temp35);
+        temp33.Children.Add(temp3);
+        temp33.Children.Add(temp37);
+        temp33.Children.Add(temp38);
+        temp33.Children.Add(temp4);
+        temp2.Bindings.Add(temp34);
+        temp3.Bindings.Add(temp36);
+        temp38.Color = float4(0.2f, 0.2352941f, 0.282353f, 1f);
+        temp38.Width = new Uno.UX.Size(14f, Uno.UX.Unit.Unspecified);
+        temp38.Height = new Uno.UX.Size(14f, Uno.UX.Unit.Unspecified);
+        temp38.Alignment = Fuse.Elements.Alignment.VerticalCenter;
+        temp38.Margin = float4(0f, 0f, 2f, 2f);
+        temp38.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Assets/Icons/Location.png"));
+        temp4.TextAlignment = Fuse.Controls.TextAlignment.Center;
+        temp4.Margin = float4(3f, 0f, 0f, 0f);
+        temp4.Bindings.Add(temp39);
+        temp40.Width = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
+        temp40.Height = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
+        temp40.Margin = float4(5f, 5f, 15f, 5f);
+        global::Fuse.Controls.DockPanel.SetDock(temp40, Fuse.Layouts.Dock.Right);
+        global::Fuse.Gestures.Clicked.AddHandler(temp40, temp_eb5.OnEvent);
+        temp40.Fills.Add(temp5);
+        temp40.Bindings.Add(temp_eb5);
+        temp40.Bindings.Add(temp41);
+        temp5.WrapMode = Fuse.Drawing.WrapMode.ClampToEdge;
+        temp6.StretchMode = Fuse.Elements.StretchMode.UniformToFill;
+        temp6.Height = new Uno.UX.Size(270f, Uno.UX.Unit.Unspecified);
+        temp6.Bindings.Add(temp42);
+        temp7.Bindings.Add(temp43);
+        temp8.Bindings.Add(temp44);
+        temp45.Orientation = Fuse.Layouts.Orientation.Horizontal;
+        temp45.Margin = float4(14f, 10f, 14f, 8f);
+        temp45.Children.Add(temp46);
+        temp45.Children.Add(temp9);
+        temp45.Children.Add(temp49);
+        temp46.Width = new Uno.UX.Size(22f, Uno.UX.Unit.Unspecified);
+        temp46.Height = new Uno.UX.Size(22f, Uno.UX.Unit.Unspecified);
+        temp46.Alignment = Fuse.Elements.Alignment.VerticalCenter;
+        temp46.Children.Add(temp47);
+        temp47.Color = float4(0.7686275f, 0.8235294f, 0.8823529f, 1f);
+        temp47.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Assets/Icons/checked.png"));
+        temp9.Bindings.Add(temp48);
+        temp49.Width = new Uno.UX.Size(150f, Uno.UX.Unit.Unspecified);
+        temp49.Height = new Uno.UX.Size(22f, Uno.UX.Unit.Unspecified);
+        temp49.Alignment = Fuse.Elements.Alignment.CenterRight;
+        temp49.Margin = float4(120f, 0f, 0f, 0f);
+        global::Fuse.Gestures.Clicked.AddHandler(temp49, temp_eb6.OnEvent);
+        temp49.Children.Add(temp10);
+        temp49.Children.Add(temp51);
+        temp49.Bindings.Add(temp_eb6);
+        temp10.Alignment = Fuse.Elements.Alignment.Right;
+        temp10.Bindings.Add(temp50);
+        temp51.Animators.Add(temp52);
+        temp52.Factor = 1.3f;
+        temp52.Duration = 0.3;
+        temp52.Easing = Fuse.Animations.Easing.BackOut;
+        __g_nametable.This = this;
+        __g_nametable.Objects.Add(temp_eb4);
+        __g_nametable.Objects.Add(temp_eb5);
+        __g_nametable.Objects.Add(temp_eb6);
+        this.Children.Add(temp27);
+        this.Children.Add(temp6);
+        this.Children.Add(temp7);
+        this.Children.Add(temp8);
+        this.Children.Add(temp45);
+        this.Children.Add(temp53);
+    }
+    static global::Uno.UX.Selector __selector0 = "Url";
+    static global::Uno.UX.Selector __selector1 = "Value";
+    static global::Uno.UX.Selector __selector2 = "File";
+}

@@ -1,0 +1,32 @@
+<Panel ux:Class="Search">
+	<Router ux:Dependency="router" />
+	<JavaScript File="MainView.js" />
+
+	<StackPanel ux:Name="topBar" Row="0" Color="#FEFEFE26" Background="#F7F5F51F" Opacity="1" Visibility="Visible">
+		<Panel Color="#252A37">
+			<StatusBarBackground />
+		</Panel>
+		<Panel Height="50">
+			<Image File="Assets/Images/back.png" Alignment="Left" Margin="1,1,1,1" Clicked="{goToHome}" />
+			<Button Alignment="CenterRight" Text="Clear" Margin="5, 0, 50, 0">
+				<Clicked>
+					<Set text.Value="" />
+				</Clicked>
+			</Button>
+			<TextInput ux:Name="text" PlaceholderText="Entrer nom d evenement" PlaceholderColor="#ccc" Height="50" Padding="5" Alignment="TopCenter">
+				<Rectangle Layer="Background">
+					<Stroke Width="2" Brush="#BBB" />
+				</Rectangle>
+			</TextInput>
+		</Panel>
+		<WhileTrue Value="{inDetailsMode}">
+			<Move Y="-1" Duration="0.3" RelativeTo="Size" />
+		</WhileTrue>
+		<LinearGradient>
+			<GradientStop Offset="0" Color="#F4F8F4" />
+			<GradientStop Offset="1" Color="#AFD9E2" />
+		</LinearGradient>
+		<Shadow />
+		<Shadow />
+	</StackPanel>
+</Panel>
